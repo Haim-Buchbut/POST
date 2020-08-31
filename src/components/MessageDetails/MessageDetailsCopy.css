@@ -1,0 +1,61 @@
+.MessageCont {
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  padding: 30px 30px 30px 30px;
+}
+
+.MessageTitle {
+  font-size: 1.375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #202124;
+  margin-top: 0em;
+}
+
+.MessageRecepient {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202124;
+  display: block;
+  line-height: 20px;
+}
+
+.MessageContent {
+  font-size: 15px;
+  line-height: 21px;
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 30px 0px 30px 0px;
+  white-space: pre-line;
+}
+
+.MessageContent p {
+  margin: 0px 0px;
+}
+
+.BasicDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.SentTimeInDetails {
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+.Star {
+  color: #EBE7E7;
+  margin-right: 10px;
+}
+
+.Starred {
+  color: #FFC300;
+}
+
+/*# sourceMappingURL=MessageDetailsCopy.css.map */

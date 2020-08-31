@@ -1,0 +1,29 @@
+
+.MessagesFolders {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .MessagesFolders {
+        display: block;
+        width: 200px;
+        min-height: 91vh;
+        min-width: 200px;
+        padding: 10px 15px 0 0;
+        box-sizing: border-box;
+        /* background-color: #F7F7F7; */
+        /* border-right: 1px solid rgb(220, 220, 220); */
+    }
+
+    .TransparentButton {
+        height: 10px;
+        width: 100%;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+    }
+}

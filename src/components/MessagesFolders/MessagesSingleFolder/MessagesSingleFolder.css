@@ -1,0 +1,25 @@
+
+.MessagesSingleFolder {
+    color: #202124;
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 0px 8px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.MessagesSingleFolder div {
+    width: 30px;
+}
+.SelectedFolder {
+    background-color: #E8EAED;
+    border-radius: 0px 20px 20px 0px;
+    font-weight: bold;
+}
+
+.MessagesSingleFolder:hover {
+    background-color: #E8EAED;
+    border-radius: 0px 20px 20px 0px;
+    font-weight: bold;
+}

@@ -1,0 +1,24 @@
+@use 'AppWideStyles';
+
+.MessageList {
+    width: 100%;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+
+    ul {
+        padding: 0;
+        margin: 0px;    
+    }
+}
+.Header {
+    @extend vertical-center-cont;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}

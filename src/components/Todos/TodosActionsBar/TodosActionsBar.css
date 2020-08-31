@@ -1,0 +1,28 @@
+
+.TodosActionsBar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* max-width: 600px; */
+    /* padding-left: 15px; */
+}
+
+.NewTodo {
+    height: 30px;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    padding-right: 30px;
+    /* display: inline-block; */
+    box-sizing: border-box;
+
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+.TodoInputCharCounter {
+    position: absolute;
+    right: 15px;
+    color: #C2C4C4;
+    font-size: 0.875rem;
+}

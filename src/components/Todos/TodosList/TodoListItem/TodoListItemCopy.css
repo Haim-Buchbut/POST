@@ -1,0 +1,35 @@
+.TodoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+  box-sizing: border-box;
+  padding: 8px 15px; }
+
+.TodoText {
+  flex-grow: 10;
+  margin: 0 10px;
+  border: none;
+  font-size: 0.875rem;
+  cursor: default;
+  outline: none;
+  background-color: inherit; }
+
+.TodoStatus {
+  font-size: 1.1rem; }
+
+.TodoDelete {
+  float: right; }
+
+.Invisible {
+  visibility: hidden; }
+
+.Done {
+  background-color: #F8F8F8;
+  text-decoration: line-through; }
+
+/*# sourceMappingURL=TodoListItemCopy.css.map */

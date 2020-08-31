@@ -1,0 +1,39 @@
+.TodoContainer {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    box-sizing: border-box;
+    padding: 8px 8px;
+}
+
+.TodoText {
+    flex-grow: 10;
+    margin: 0 10px;
+    border: none;
+    font-size: 0.875rem;
+    cursor: default;
+    outline: none;
+    background-color: inherit;
+}
+.TodoStatus {
+    font-size: 1.1rem;
+}
+.CharCounter {
+    margin-right: 10px;
+    color: #C2C4C4;
+    font-size: 0.875rem;
+}
+.TodoDelete {
+    float: right;
+}
+.Invisible {
+    visibility: hidden; 
+}
+.Done {
+    text-decoration: line-through;
+}

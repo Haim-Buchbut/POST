@@ -1,0 +1,56 @@
+
+.MessageList {
+    width: 100%;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+.Header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.Header h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}  
+.MessageList ul {
+    padding: 0;
+    margin: 0px;
+}
+.ListTitle {
+    font-size: 1rem;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #757575;
+}
+
+
+.EmptyResults {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.EmptyResultsIcon {
+    color: #61dafb;
+}
+.EmptyResultsText {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .ListTitle {
+        display: none;
+    }    
+    .EmptyResultsIcon {
+        display: none;
+    }
+}
