@@ -66,7 +66,7 @@ class MessagesList extends Component {
                 return (
                     <div className="EmptyResults">
                         <FontAwesomeIcon className="EmptyResultsIcon" size="3x" icon={(this.props.selectedFolder === null)? faSearch : faFolderOpen} />
-                        <span className="EmptyResultsText">{(this.props.selectedFolder === null)? "No emails matched your search" : "Nothing in the '" + this.getTitle() + "' folder"}</span>
+                        <span className="EmptyResultsText">{(this.props.selectedFolder === null)? "No emails matching your search" : "Nothing in the '" + this.getTitle() + "' folder"}</span>
                     </div>
                 );
         // }
