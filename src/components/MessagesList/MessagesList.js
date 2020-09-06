@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import MessagesListItem from './MessagesListItem/MessagesListItem';
-import './MessagesList.css';
-import '../../App.css';
+// import './MessagesList.css';
+// import '../../App.css';
+import '../../main.css';
 import '../../App.js';
 import { FOLDER_NAME_INBOX, FOLDER_NAME_SENT, FOLDER_NAME_STARRED } from '../../constants';
 import Spinner from '../UI/Spinner/Spinner';

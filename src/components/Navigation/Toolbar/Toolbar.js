@@ -3,7 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import { searchMessagesInDB } from '../../../store/actions/MessagesActions';
 import { connect } from 'react-redux';
 
-import './Toolbar.css';
+// import './Toolbar.css';
+import '../../../main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -28,8 +29,8 @@ class Toolbar extends Component {
         this.setState({
             isDrawerOpen : !this.state.isDrawerOpen
         });
-    }
-
+    } 
+ 
     render() {
         return (
             <div className="Toolbar">

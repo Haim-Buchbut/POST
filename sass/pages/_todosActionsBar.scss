@@ -1,0 +1,23 @@
+
+.TodosActionsBar {
+    @extend #flex-row-left;
+    position: relative;
+}
+
+.NewTodo {
+    height: 30px;
+    width: 100%; 
+    box-sizing: border-box;
+    padding-left: $md-pad;
+    padding-right: $lg-pad;
+    font-size: $def-font-size;
+    /* display: inline-block; */
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+.TodoInputCharCounter {
+    position: absolute;
+    right: 15px;
+    color: $text-light-gray-color;
+    font-size: $def-font-size;
+}

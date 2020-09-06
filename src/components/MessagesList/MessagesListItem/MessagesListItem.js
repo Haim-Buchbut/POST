@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import './MessagesListItem.css';
+// import './MessagesListItem.css'; 
+import '../../../main.css';
 // import actionTypes from '../../../store/actions/actionTypes';
 import { deleteMessageFromDB, getMessageFromDB, toggleStar } from '../../../store/actions/MessagesActions';
 import { getSentTimeStr } from '../../../Utilities.js';

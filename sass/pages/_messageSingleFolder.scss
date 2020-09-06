@@ -1,0 +1,25 @@
+// @use '../abstracts/mixins';
+
+.MessagesSingleFolder { 
+    @extend #flex-row-left;
+    padding: $sm-pad 0px $sm-pad $md-pad;
+    box-sizing: border-box;
+    font-size: $def-font-size; 
+    cursor: pointer;
+ 
+    div {
+        width: 30px;
+    }
+}
+
+.SelectedFolder {
+    background-color: $background-darker-gray-color;
+    border-radius: 0px 20px 20px 0px;
+    font-weight: bold;
+}
+ 
+.MessagesSingleFolder:hover {
+    background-color: $background-darker-gray-color;
+    border-radius: 0px 20px 20px 0px;
+    font-weight: bold;
+}

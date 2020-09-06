@@ -5,7 +5,8 @@ import { getMessageFromDB, deleteMessageFromDB, markMessageAsViewed, toggleStar 
 import { getSentTimeStrExt } from '../../Utilities.js';
 import { withRouter } from 'react-router-dom';
 
-import './MessageDetails.css';
+// import './MessageDetails.css';
+import '../../main.css';
 import Spinner from '../UI/Spinner/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';

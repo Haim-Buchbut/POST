@@ -1,5 +1,6 @@
 import React from 'react';
-import './MessagesSingleFolder.css';
+// import './MessagesSingleFolder.css';
+import '../../../main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInbox, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faPaperPlane, faCheckSquare } from '@fortawesome/free-regular-svg-icons';

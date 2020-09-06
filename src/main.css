@@ -1,0 +1,1040 @@
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/components/_backdrop.scss */
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/components/_buttons.scss */
+.Button, .MainCTAButton {
+  height: 30px;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  border-style: solid;
+  border-radius: 4px;
+  background-color: inherit;
+}
+
+/* line 10, ../../Users/User/Documents/Web Dev/rmail/sass/components/_buttons.scss */
+.Button {
+  border-width: 1px;
+  border-color: #202124;
+  color: #202124;
+}
+
+/* line 17, ../../Users/User/Documents/Web Dev/rmail/sass/components/_buttons.scss */
+.MainCTAButton {
+  border-width: 2px;
+  border-color: #61dafb;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/components/_icons.scss */
+.Icons {
+  color: #61dafb;
+}
+
+/* line 3, ../../Users/User/Documents/Web Dev/rmail/sass/components/_links.scss */
+.MyLink {
+  text-decoration: none;
+  color: #222222;
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/components/_spinner.scss */
+.Loader,
+.Loader:before,
+.Loader:after {
+  border-radius: 50%;
+}
+
+/* line 6, ../../Users/User/Documents/Web Dev/rmail/sass/components/_spinner.scss */
+.Loader {
+  color: #61dafb;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 150px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* line 19, ../../Users/User/Documents/Web Dev/rmail/sass/components/_spinner.scss */
+.Loader:before,
+.Loader:after {
+  position: absolute;
+  content: '';
+}
+
+/* line 24, ../../Users/User/Documents/Web Dev/rmail/sass/components/_spinner.scss */
+.Loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #ffffff;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+
+/* line 36, ../../Users/User/Documents/Web Dev/rmail/sass/components/_spinner.scss */
+.Loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #ffffff;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-grouped-items-start, .LeftCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* line 7, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-grouped-items-end, .RightCont, .MessageHeaderTopRowMobile div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* line 14, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-row-left, .SearchCont, .MessagesSingleFolder, .TodosActionsBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* line 21, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-row-left-padding {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+/* line 30, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-row-edges, .Toolbar, .EmailMobileTopRow, .EmailMobileBottomRow, .MessageHeaderTopRowMobile, .MessageHeaderBottomRowMobile, .BasicDetails, .TodoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 37, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-row-edges-padding {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+/* line 46, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-row-center {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 53, ../../Users/User/Documents/Web Dev/rmail/sass/components/_containers.scss */
+#flex-row-center-padding, .NewMessageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_appLayout.scss */
+html {
+  height: 100%;
+}
+
+/* line 5, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_appLayout.scss */
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #202124;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.Toolbar {
+  height: 9vh;
+  box-sizing: border-box;
+  padding: 4px 15px;
+  background-color: #20232a;
+}
+
+/* line 8, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.LeftCont {
+  flex-grow: 2;
+}
+
+/* line 12, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.RightCont {
+  margin-left: 15px;
+}
+
+/* line 16, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.Logo {
+  display: none;
+}
+
+/* line 19, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.AppName {
+  margin-left: 8px;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #61dafb;
+}
+
+/* line 25, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.SearchCont {
+  flex-grow: 2;
+  margin-left: 15px;
+  padding: 0 5px;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  /* for the search icon */
+}
+
+/* line 34, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.SearchBar {
+  height: 32px;
+  border: transparent;
+  background-color: white;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  width: 100%;
+}
+
+/* line 42, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.SearchBar:focus {
+  outline: none;
+}
+
+/* line 45, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.ComposeCTA {
+  display: none;
+}
+
+/* line 48, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.ComposeImage {
+  width: 24px;
+  height: 24px;
+  /* nice tool to generate filter values from a HEX value of a color to apply to an image:
+    https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(73%) sepia(62%) saturate(504%) hue-rotate(159deg) brightness(99%) contrast(98%);
+}
+
+/* line 55, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.SignOutCTA {
+  display: none;
+}
+
+/* line 58, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.UserMenu {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 63, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .Logo {
+    display: initial;
+    margin-left: 10px;
+    color: #61dafb;
+    font-size: 1.4em;
+  }
+  /* line 69, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .AppName {
+    font-size: 1.4em;
+  }
+  /* line 72, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .SearchCont {
+    max-width: 300px;
+    padding: 0 10px;
+    margin-left: 30px;
+  }
+  /* line 77, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .ComposeCTA {
+    display: initial;
+    margin-left: 20px;
+  }
+  /* line 81, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .ComposeImage {
+    display: none;
+  }
+  /* line 84, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .SignOutCTA {
+    display: initial;
+  }
+  /* line 87, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .UserMenu {
+    display: initial;
+    color: #61dafb;
+    margin-left: 10px;
+  }
+}
+
+/* line 94, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.Actions {
+  font-weight: 600rem;
+  color: white;
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.DrawerCont {
+  width: 90%;
+  max-width: 330px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  background-color: #20232a;
+}
+
+/* line 11, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.DrawerHeader {
+  width: 100%;
+  height: 9vh;
+  box-sizing: border-box;
+  padding: 4px 30px;
+  /* border-bottom: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 22, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.SDAppName {
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #61dafb;
+}
+
+/* line 28, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.CloseDrawer {
+  color: white;
+}
+
+/* line 31, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.HideSideDrawer {
+  display: none;
+}
+
+/* line 36, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.Folder {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 30px 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* line 44, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.DrawerCont a {
+  text-decoration: none;
+}
+
+/* line 47, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.Folder div {
+  width: 30px;
+  color: #61dafb;
+}
+
+/* line 51, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.Folder span {
+  color: white;
+}
+
+/* line 55, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+.NavigationLink {
+  width: 100%;
+  height: 30px;
+  padding-left: 15px;
+  border-bottom: 1px solid #DCDCDC;
+  border-left: 1px solid #DCDCDC;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 67, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
+  .DrawerCont {
+    display: none;
+  }
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_drawerToggle.scss */
+.DrawerToggle {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 18px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* line 11, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_drawerToggle.scss */
+.DrawerToggle div {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 18, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_drawerToggle.scss */
+  .DrawerToggle {
+    display: none;
+  }
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesFolders.scss */
+.MessagesFolders {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 8, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesFolders.scss */
+  .MessagesFolders {
+    display: block;
+    width: 200px;
+    min-height: 91vh;
+    min-width: 200px;
+    padding: 8px 15px 0 0;
+    box-sizing: border-box;
+  }
+  /* line 17, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesFolders.scss */
+  .TransparentButton {
+    height: 10px;
+    width: 100%;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+}
+
+/* line 3, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageSingleFolder.scss */
+.MessagesSingleFolder {
+  padding: 8px 0px 8px 15px;
+  box-sizing: border-box;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+
+/* line 10, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageSingleFolder.scss */
+.MessagesSingleFolder div {
+  width: 30px;
+}
+
+/* line 15, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageSingleFolder.scss */
+.SelectedFolder {
+  background-color: #E8EAED;
+  border-radius: 0px 20px 20px 0px;
+  font-weight: bold;
+}
+
+/* line 21, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageSingleFolder.scss */
+.MessagesSingleFolder:hover {
+  background-color: #E8EAED;
+  border-radius: 0px 20px 20px 0px;
+  font-weight: bold;
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+.MessageList {
+  width: 100%;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+.MessageList ul {
+  padding: 0;
+  margin: 0px;
+}
+
+/* line 12, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+.ListTitle {
+  margin: 15px 0 0 15px;
+  color: #808080;
+}
+
+/* line 18, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+.EmptyResults {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 25, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+.EmptyResultsIcon {
+  color: #61dafb;
+}
+
+/* line 28, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+.EmptyResultsText {
+  margin-top: 30px;
+  font-size: 1.125em;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 35, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+  .ListTitle {
+    display: none;
+  }
+  /* line 38, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesList.scss */
+  .EmptyResultsIcon {
+    display: none;
+  }
+}
+
+/* mobile */
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.EmailContainerMobile {
+  width: 100%;
+  background-color: white;
+  font-weight: 500;
+  /* border-bottom: 1px solid rgb(220, 220, 220); */
+  /* border-top: 1px solid rgb(220, 220, 220); */
+  box-sizing: border-box;
+  padding: 15px 0 15px 15px;
+}
+
+/* line 11, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.EmailContainerWeb {
+  display: none;
+}
+
+/* line 17, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.EmailMobileBottomRow {
+  margin-top: 4px;
+}
+
+/* line 21, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.To {
+  width: 70%;
+  font-size: 1.125em;
+  letter-spacing: 0.2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 29, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.SentTimeInList {
+  font-size: 0.75em;
+  margin-right: 15px;
+}
+
+/* line 33, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.Subject {
+  width: 75%;
+  font-size: 0.875rem;
+  /* flex-grow: 100; */
+  letter-spacing: 0.2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 42, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.Star {
+  color: #EBE7E7;
+  margin-right: 15px;
+}
+
+/* line 46, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.Starred {
+  color: #FFC300;
+}
+
+/* line 49, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.DeleteIcon {
+  margin-right: 15px;
+}
+
+/* line 52, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.Viewed {
+  /* background-color: #F2F5F5; */
+  font-weight: normal;
+}
+
+/* desktop */
+@media only screen and (min-width: 768px) {
+  /* line 60, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .EmailContainerMobile {
+    display: none;
+  }
+  /* line 63, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .EmailContainerWeb {
+    display: block;
+    width: 100%;
+    background-color: white;
+    font-weight: 500;
+    border-bottom: 1px solid gainsboro;
+    /* border-top: 1px solid rgb(220, 220, 220); */
+    box-sizing: border-box;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: default;
+  }
+  /* line 79, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .EmailContainer:hover {
+    border: 1px solid #C2C4C4;
+    border-bottom: 2px solid #C2C4C4;
+  }
+  /* line 83, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .Viewed {
+    /* background-color: #F2F5F5; */
+    font-weight: normal;
+  }
+  /* line 87, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .To {
+    width: 25%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+  }
+  /* line 93, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .Subject {
+    width: 58%;
+    box-sizing: border-box;
+  }
+  /* line 97, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .ActionsCont {
+    width: 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  /* line 104, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+  .Star {
+    width: 3%;
+    margin: none;
+  }
+}
+
+/* line 112, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesListItem.scss */
+.Invisible {
+  visibility: hidden;
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesActionsBar.scss */
+.MessagesActionsBar {
+  /* width: 100%; */
+  height: 40px;
+  border-radius: 8px;
+  /* padding: 2px 10px 2px 0px; */
+  /* box-sizing: border-box; */
+  /* border-bottom: 1px solid rgb(220, 220, 220);; */
+  /* border-top: 1px solid rgb(220, 220, 220);; */
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messagesCont.scss */
+.MessagesCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; */
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageCont {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 15px;
+}
+
+/* line 7, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageHeaderDesktop {
+  display: none;
+}
+
+/* line 16, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageHeaderBottomRowMobile {
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gainsboro;
+}
+
+/* line 23, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageTitle {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-right: 20px;
+}
+
+/* line 32, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.SentTimeInDetails {
+  font-size: 0.75em;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 37, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+  .MessageHeaderDesktop {
+    display: inherit;
+  }
+  /* line 40, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+  .MessageCont {
+    max-width: 900px;
+    padding: 30px;
+  }
+  /* line 44, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+  .MessageHeaderMobile {
+    display: none;
+  }
+  /* line 47, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+  .SentTimeInDetails {
+    margin-right: 15px;
+  }
+}
+
+/* line 52, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageRecepient {
+  font-size: 0.75em;
+  font-weight: bold;
+  display: block;
+  line-height: 20px;
+}
+
+/* line 59, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageContent {
+  font-size: 1em;
+  line-height: 21px;
+  margin: 10px 0px 30px 0px;
+  white-space: pre-line;
+}
+
+/* line 65, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.MessageContent p {
+  margin: 0px 0px;
+}
+
+/* line 68, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.BasicDetails {
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gainsboro;
+  margin-top: 10px;
+}
+
+/* line 76, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.Star {
+  color: #EBE7E7;
+  margin-right: 10px;
+}
+
+/* line 80, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_messageDetails.scss */
+.Starred {
+  color: #FFC300;
+}
+
+/* line 5, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.NewMessage {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* line 9, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.NewEmailHeader {
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* line 15, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.NewEmailHeader span {
+  font-size: 1.125em;
+  font-weight: 500;
+}
+
+/* line 20, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.NewEmailForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* line 27, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.FormLabel {
+  display: none;
+}
+
+/* line 30, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.FormErrorMessage {
+  font-size: 0.75em;
+  color: red;
+  margin-top: 5px;
+}
+
+/* line 35, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  /* -webkit-text-fill-color: #fff !important; */
+}
+
+/* line 42, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.InputText {
+  border-width: 0 0 1px 0;
+  height: 20px;
+  margin-top: 15px;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* line 49, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.InputText:focus {
+  outline: none;
+}
+
+/* line 52, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.ToContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* line 56, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.ToPlaceholder {
+  width: 25px;
+  border-width: 0 0 1px 0;
+  border-color: #767676;
+  border-style: solid;
+  font-size: 1em;
+  padding-bottom: 2px;
+  color: #757575;
+}
+
+/* line 65, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+#editor {
+  border: none;
+  font: 400 13.33px Arial;
+  font-size: 1em;
+  height: 250px;
+  resize: none;
+}
+
+/* line 72, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+#editor:focus {
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 80, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+  .NewEmailHeader {
+    background-color: #202124;
+    color: white;
+    box-sizing: border-box;
+    padding: 8px 15px;
+  }
+  /* line 86, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+  .NewEmailForm {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(163, 132, 132, 0.2);
+    /* border: 1px solid; */
+    box-sizing: border-box;
+    padding: 0px 15px 30px 15px;
+  }
+}
+
+/* line 101, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+#seperator {
+  width: 100%;
+  height: 20px;
+}
+
+/* .ck.ck-editor {
+    margin-top: 20px;  
+} */
+/* line 109, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.ck-editor__editable {
+  height: 250px;
+}
+
+/* line 113, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+.ActionsBar {
+  margin-top: 20px;
+}
+
+/* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todosList.scss */
+.TodosList {
+  margin: 0;
+  width: 100%;
+  padding: 0px;
+  /* max-width: 600px; */
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.TodoContainer {
+  padding: 8px;
+  flex-wrap: wrap;
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.TodoText {
+  flex-grow: 10;
+  margin: 0 10px;
+  border: none;
+  font-size: 0.875em;
+  cursor: default;
+  outline: none;
+  background-color: inherit;
+}
+
+/* line 20, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.TodoStatus {
+  font-size: 1.125em;
+}
+
+/* line 23, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.CharCounter {
+  margin-right: 10px;
+  color: #C2C4C4;
+  font-size: 0.875em;
+}
+
+/* line 28, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.TodoDelete {
+  float: right;
+}
+
+/* line 31, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.Invisible {
+  visibility: hidden;
+}
+
+/* line 34, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todoListItem.scss */
+.Done {
+  text-decoration: line-through;
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todosActionsBar.scss */
+.TodosActionsBar {
+  position: relative;
+}
+
+/* line 7, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todosActionsBar.scss */
+.NewTodo {
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 30px;
+  font-size: 0.875em;
+  /* display: inline-block; */
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+
+/* line 18, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todosActionsBar.scss */
+.TodoInputCharCounter {
+  position: absolute;
+  right: 15px;
+  color: #C2C4C4;
+  font-size: 0.875em;
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todosModule.scss */
+.TodosView {
+  width: 100%;
+  min-width: 300px;
+  padding: 15px;
+}
+
+/* line 8, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_todosModule.scss */
+.TodosModule {
+  width: 100%;
+  max-width: 500px;
+}
+
+/*# sourceMappingURL=main.css.map */

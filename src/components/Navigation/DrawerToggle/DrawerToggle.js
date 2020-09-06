@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import '../../../store/actions/actionTypes';
-import './DrawerToggle.css';
+// import './DrawerToggle.css';
+import '../../../main.css';
+
 import actionTypes from '../../../store/actions/actionTypes';
 
 const drawerToggle = (props) => (

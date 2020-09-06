@@ -1,28 +1,29 @@
-@import '_AppWideStyles';
 
- 
 .TodoContainer {
-    @include vertical-center-cont;
+    @extend #flex-row-edges;
+    padding: $sm-pad; 
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
     background-color: white;
     border-bottom: 1px solid rgb(220, 220, 220);
     box-sizing: border-box;
-    padding: 8px 15px; 
 }
 
 .TodoText {
     flex-grow: 10;
     margin: 0 10px;
     border: none;
-    font-size: 0.875rem;
-    cursor: default;
-    outline: none;
+    font-size: $def-font-size;
+    cursor: default; 
+    outline: none; 
     background-color: inherit;
 }
 .TodoStatus {
-    font-size: 1.1rem;
+    font-size: $lg-font-size;
+}
+.CharCounter {
+    margin-right: 10px;
+    color: $text-light-gray-color;
+    font-size: $def-font-size;
 }
 .TodoDelete {
     float: right;
@@ -31,6 +32,5 @@
     visibility: hidden; 
 }
 .Done {
-    background-color: #F8F8F8;
     text-decoration: line-through;
 }

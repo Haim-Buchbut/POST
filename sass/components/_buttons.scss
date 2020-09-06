@@ -1,0 +1,23 @@
+%button {
+    height: 30px;
+    box-sizing: border-box;
+    padding: 0px $md-pad;
+    border-style: solid;
+    border-radius: 4px;
+    background-color: inherit;
+}
+
+.Button {
+    @extend %button;
+    border-width: 1px;
+    border-color: $text-black-color;
+    color: $text-black-color;
+}
+
+.MainCTAButton {
+    @extend %button;
+    border-width: 2px;
+    border-color: $react-color;
+    color: $react-color;
+    font-weight: bold;
+}

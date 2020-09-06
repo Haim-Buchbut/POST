@@ -5,7 +5,8 @@ import TodosActionsBar from '../TodosActionsBar/TodosActionsBar';
 import TodosList from '../TodosList/TodosList';
 import { TODO_STATUS_ACTIVE, TODO_STATUS_DONE } from '../../../constants';
 import { addTodo, getTodos, deleteTodo, toggleTodoStatus, updateTodo } from '../../../store/actions/TodosActions';
-import './TodosModule.css';
+// import './TodosModule.css';
+import '../../../main.css';
 
 
 class TodosModule extends Component {

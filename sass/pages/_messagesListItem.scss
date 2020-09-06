@@ -1,0 +1,114 @@
+/* mobile */
+.EmailContainerMobile { 
+    width: 100%;
+    background-color: white;
+    font-weight: 500;
+    /* border-bottom: 1px solid rgb(220, 220, 220); */
+    /* border-top: 1px solid rgb(220, 220, 220); */
+    box-sizing: border-box;
+    padding: $md-pad 0 $md-pad $md-pad;
+}
+.EmailContainerWeb {
+    display: none;
+}
+.EmailMobileTopRow {
+    @extend #flex-row-edges;
+}
+.EmailMobileBottomRow {
+    @extend #flex-row-edges;
+    margin-top: 4px;
+}
+.To {
+    width: 70%;
+    font-size: $lg-font-size;
+    letter-spacing: 0.2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.SentTimeInList {
+    font-size: $sm-font-size;
+    margin-right: $md-mrg;
+}
+.Subject {
+    width: 75%;
+    font-size: 0.875rem;
+    /* flex-grow: 100; */
+    letter-spacing: 0.2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Star {
+    color: #EBE7E7;
+    margin-right: $md-mrg;
+}
+.Starred {
+    color: $star-icon-color;
+}
+.DeleteIcon {
+    margin-right: $md-mrg;
+}
+.Viewed {
+    /* background-color: #F2F5F5; */
+    font-weight: normal;
+}
+
+/* desktop */
+@media only screen and (min-width: 768px)
+{
+    .EmailContainerMobile {
+        display: none;
+    }
+    .EmailContainerWeb {
+        display: block;
+        width: 100%;
+        background-color: white;
+        font-weight: 500;
+        border-bottom: 1px solid rgb(220, 220, 220);
+        /* border-top: 1px solid rgb(220, 220, 220); */
+        box-sizing: border-box;
+        padding: 8px 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: default;
+    }
+    .EmailContainer:hover {
+        border: 1px solid #C2C4C4;
+        border-bottom: 2px solid #C2C4C4;
+    } 
+    .Viewed {
+        /* background-color: #F2F5F5; */
+        font-weight: normal;
+    }
+    .To {
+        width: 25%;
+        padding-right: 20px;
+        box-sizing: border-box;
+        font-size: 0.875rem;
+    }
+    .Subject {
+        width: 58%;
+        box-sizing: border-box;
+    }
+    .ActionsCont {
+        width: 10%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }    
+    .Star {
+        width: 3%;
+        margin: none;
+    }
+}
+
+
+
+.Invisible {
+    visibility: hidden; 
+}

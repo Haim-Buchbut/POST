@@ -6,8 +6,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
-import './NewMessage.css';
-import '../../App.css';
+// import './NewMessage.css';
+// import '../../App.css';
+import '../../main.css';
 import { addMessgaeToDB } from '../../store/actions/MessagesActions';
 
 class NewMessage extends Component {
@@ -16,15 +17,9 @@ class NewMessage extends Component {
     }
 
     componentDidMount() {
-        // const isMobileDevice = useMediaQuery({
-        //     query: '(max-device-width: 768px)'
-        //   });
-        console.log(window.innerHeight);
-        console.log(window.innerWidth);
         let isMobile = false;
         if(window.innerWidth <= 768)
             isMobile = true;
-        console.log(isMobile);
         if(!isMobile)
         {
             console.log("Creating editor");
@@ -69,7 +64,6 @@ class NewMessage extends Component {
                         initialValues={{ to: '', subject: '', message: '' }}
                     
                         validate={ values => {
-                            values.message = this.state.messageEditor.getData()
                             const errors = {};
                             if (!values.to) {
                                 errors.to = 'Required';
@@ -79,9 +73,6 @@ class NewMessage extends Component {
                             }
                             if(!values.subject)
                                 errors.subject = 'Required';
-                            // if(!values.message) - not enforcing having a content (like GMail) 
-                            //    errors.message = 'Required';
-                            
                             return errors;
                         }}
 
@@ -107,7 +98,7 @@ class NewMessage extends Component {
                             <div className="ActionsBar">
                                 <button type="submit" className="MainCTAButton" style={{marginRight: "10px"}}>Send</button>
                                 <Link to="/">
-                                    <button className="SecondaryCTAButton">Discard</button>
+                                    <button className="Button">Discard</button>
                                 </Link>
                             </div>
                         </Form>

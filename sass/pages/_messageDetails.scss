@@ -1,0 +1,82 @@
+
+.MessageCont {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 15px;
+}
+.MessageHeaderDesktop {
+    display: none;
+}
+.MessageHeaderTopRowMobile {
+    @extend #flex-row-edges;
+}
+.MessageHeaderTopRowMobile div {
+    @extend #flex-grouped-items-end;
+}
+.MessageHeaderBottomRowMobile {
+    @extend #flex-row-edges;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.MessageTitle { 
+    font-size: $xl-font-size; 
+    // font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    // color: $text-black-color; 
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-right: 20px; 
+}
+.SentTimeInDetails {
+    font-size: $sm-font-size;
+}
+
+@media only screen and (min-width: 768px) {
+    .MessageHeaderDesktop {
+        display: inherit;
+    }
+    .MessageCont {
+        max-width: 900px;
+        padding: 30px;
+    } 
+    .MessageHeaderMobile {   
+        display: none; 
+    }   
+    .SentTimeInDetails {
+        margin-right: 15px;
+    }
+}
+
+.MessageRecepient { 
+    font-size: $sm-font-size;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+.MessageContent {
+    font-size: $md-font-size;
+    line-height: 21px;
+    margin: 10px 0px 30px 0px;
+    white-space: pre-line;
+}
+.MessageContent p {
+    margin: 0px 0px;
+}
+.BasicDetails {
+    @extend #flex-row-edges; 
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    margin-top: 10px;
+}
+
+.Star {
+    color: #EBE7E7;
+    margin-right: 10px;
+}
+.Starred {
+    color: $star-icon-color;
+}

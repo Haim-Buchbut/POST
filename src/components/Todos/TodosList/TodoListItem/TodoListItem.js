@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquare, faCheckSquare, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 import { TODO_STATUS_ACTIVE, TODO_STATUS_DONE } from '../../../../constants';
-import './TodoListItem.css';
+// import './TodoListItem.css'; 
+import '../../../../main.css';
+
 
 class todosListItem extends Component {
     state = {

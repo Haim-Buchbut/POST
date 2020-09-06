@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import './MessagesFolders.css';
+// import './MessagesFolders.css';
+import '../../main.css';
 import MessagesSingleFolder from './MessagesSingleFolder/MessagesSingleFolder';
 import {  getMessagesFromDB, refreshMessages, fillMyInbox } from '../../store/actions/MessagesActions';  // getMessages
 import { FOLDER_NAME_INBOX, FOLDER_NAME_SENT, FOLDER_NAME_STARRED, FOLDER_NAME_TODO } from '../../constants';

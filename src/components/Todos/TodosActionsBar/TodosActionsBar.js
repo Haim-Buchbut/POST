@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import './TodosActionsBar.css';
-
+// import './TodosActionsBar.css';
+import '../../../main.css';
+ 
 class TodosActionsBar extends Component {
     state = {
         text: ''
-    }
+    } 
     
     handleSubmit = e => {
         const text = e.target.value.trim();

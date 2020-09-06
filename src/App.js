@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import MessagesReducer from './store/reducers/MessagesReducer';
 import TodosReducer from './store/reducers/TodosReducer';
 
-import './App.css';
+import './main.css';
 import NewMessage from './components/NewMessage/NewMessage';
 import MessageLists from './components/MessagesList/MessagesList'
 import MessageFolders from './components/MessagesFolders/MessagesFolders'

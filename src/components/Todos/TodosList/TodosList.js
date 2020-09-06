@@ -5,7 +5,9 @@ import TodosListItem from './TodoListItem/TodoListItem';
 import Spinner from '../../UI/Spinner/Spinner';
 import { connect } from 'react-redux';
 
-import './TodosList.css';
+// import './TodosList.css';
+import '../../../main.css'; 
+
 
 class TodosList extends Component {
     render() {

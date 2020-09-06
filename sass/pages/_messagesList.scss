@@ -1,0 +1,41 @@
+.MessageList {
+    width: 100%;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+
+    ul {
+        padding: 0;
+        margin: 0px;    
+    }
+}
+
+.ListTitle {
+    margin: $md-pad 0 0 $md-pad;
+    color: $text-gray-color;
+}
+
+
+.EmptyResults {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.EmptyResultsIcon {
+    color: $react-color;
+}
+.EmptyResultsText {
+    margin-top: $lg-pad;
+    font-size: $lg-font-size;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .ListTitle {
+        display: none;
+    }    
+    .EmptyResultsIcon {
+        display: none;
+    }
+}
