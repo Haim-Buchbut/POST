@@ -17,7 +17,7 @@
 .MainCTAButton {
     @extend %button;
     border-width: 2px;
-    border-color: $react-color;
-    color: $react-color;
+    border-color: $app-main-color;
+    color: $app-main-color;
     font-weight: bold;
 }

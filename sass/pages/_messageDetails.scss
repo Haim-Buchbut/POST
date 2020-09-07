@@ -1,15 +1,18 @@
 
 .MessageCont {
     width: 100%;
+    min-height: 75vh;
     box-sizing: border-box;
-    padding: 30px 15px;
+    margin: $md-mrg;
+    padding: $md-pad;
+    background-color: $letter-paper-color;
 }
 .MessageHeaderDesktop {
     display: none;
 }
 .MessageHeaderTopRowMobile {
     @extend #flex-row-edges;
-}
+} 
 .MessageHeaderTopRowMobile div {
     @extend #flex-grouped-items-end;
 }
@@ -22,9 +25,8 @@
 }
 .MessageTitle { 
     font-size: $xl-font-size; 
-    // font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-letter;
     font-weight: 400;
-    // color: $text-black-color; 
     margin-top: 0em;
     margin-bottom: 0em;
     margin-right: 20px; 
@@ -38,8 +40,8 @@
         display: inherit;
     }
     .MessageCont {
-        max-width: 900px;
-        padding: 30px;
+        padding: $lg-pad;
+        max-width: 800px;
     } 
     .MessageHeaderMobile {   
         display: none; 
@@ -57,9 +59,10 @@
 }
 
 .MessageContent {
+    font-family: $font-letter;
     font-size: $md-font-size;
     line-height: 21px;
-    margin: 10px 0px 30px 0px;
+    margin: 10px 0px 30px 0px; 
     white-space: pre-line;
 }
 .MessageContent p {

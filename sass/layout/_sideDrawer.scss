@@ -1,18 +1,18 @@
 .DrawerCont {
-    width: 90%;
+    width: 80%;
     max-width: 330px;
     height: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: 500;
-    background-color: $background-black-color;
+    background-color: white; // $app-main-color;
 }
 .DrawerHeader {
     width: 100%;
     height: 9vh;
     box-sizing: border-box;
-    padding: 4px 30px;
+    padding: 4px $md-pad;
 
     /* border-bottom: 1px solid white; */
     display: flex;
@@ -22,8 +22,7 @@
 .SDAppName {
     font-size: $lg-font-size;
     font-weight: 500;
-    color: $react-color;
-    // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: $app-main-color;
 }
 .CloseDrawer {
     color: white;
@@ -36,7 +35,7 @@
 .Folder {
     width: 100%;
     font-size: 16px;
-    padding: 15px 30px 15px 30px;
+    padding: $md-pad;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -46,10 +45,10 @@
 }
 .Folder div {
     width: 30px;
-    color: $react-color;
+    color: red;
 }
 .Folder span {
-    color: white;
+    color: $text-black-color;
 }
 
 .NavigationLink {

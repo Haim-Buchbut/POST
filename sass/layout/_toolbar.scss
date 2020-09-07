@@ -1,17 +1,17 @@
 .Toolbar {
     @extend #flex-row-edges; 
-    height: 9vh;
+    height: $toolbar-height;
     box-sizing: border-box; 
     padding: 4px $md-pad;
-    background-color: $background-black-color;
+    background-color: $app-main-color;
 } 
 .LeftCont { 
     @extend #flex-grouped-items-start;
-    flex-grow: 2;
+    flex-grow: 2; 
 }
 .RightCont {
+    display: none;
     @extend #flex-grouped-items-end;
-    margin-left: $md-pad;
 }
 .Logo {
     display: none;
@@ -19,8 +19,9 @@
 .AppName {
     margin-left: $sm-mrg;
     font-size: $lg-font-size;
+    font-family: $font-letter;
     font-weight: 500;
-    color: $react-color;
+    color: white;
 }
 .SearchCont {
     @extend #flex-row-left;
@@ -30,6 +31,7 @@
     background-color: white;
     border-radius: 4px; 
     font-size: 0.9rem; /* for the search icon */
+    color: $app-main-color;
 }
 .SearchBar {
     height: 32px;
@@ -48,23 +50,27 @@
 .ComposeImage {
     width: 24px;
     height: 24px;
+    margin-left: $md-pad;
     /* nice tool to generate filter values from a HEX value of a color to apply to an image:
     https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(73%) sepia(62%) saturate(504%) hue-rotate(159deg) brightness(99%) contrast(98%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(107deg) brightness(104%) contrast(103%);
 }
 .SignOutCTA {
     display: none;
 }
 .UserMenu {
-    display: none;
+    display: none; 
 }
 
 @media only screen and (min-width: 768px) {
+    .RightCont {
+        display: initial;
+    }    
     .Logo {
         display: initial;
-        margin-left: 10px;
-        color: $react-color;
-        font-size: $xl-font-size;
+        // margin-left: 10px;
+        color: white;
+        font-size: 2em; // $xl-font-size;
     }
     .AppName {
         font-size: $xl-font-size;
@@ -72,22 +78,18 @@
     .SearchCont {
         max-width: 300px;
         padding: 0 10px;
-        margin-left: 30px;
+        margin-left: $lg-mrg;
     }
-    .ComposeCTA {
-        display: initial;
-        margin-left: 20px;
-    }
-    .ComposeImage {
-        display: none;
-    }
-    .SignOutCTA {
-        display: initial; 
-    }
+    // .ComposeCTA {
+    //     display: initial;
+    //     margin-left: 20px;
+    // }
+    // .SignOutCTA {
+    //     display: initial; 
+    // }
     .UserMenu {
         display: initial;
-        color: $react-color;
-        margin-left: 10px;
+        color: white;
     }
 }
 

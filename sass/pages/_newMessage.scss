@@ -16,7 +16,7 @@
     font-size: $lg-font-size;
     font-weight: 500;
 }
-
+ 
 .NewEmailForm {
     display: flex;
     flex-direction: column;
@@ -77,18 +77,21 @@ input:-webkit-autofill:active {
 
 
 @media only screen and (min-width: 768px) {
-    .NewEmailHeader {
-        background-color: #202124;
-        color: white;
-        box-sizing: border-box;
-        padding: 8px 15px;
-    }
-    .NewEmailForm {
-        box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 4px 6px rgba(163, 132, 132, 0.2); 
-        /* border: 1px solid; */
-        box-sizing: border-box;
-        padding: 0px 15px 30px 15px;
-    }
+    // .NewEmailHeader {
+    //     background-color: #202124;
+    //     color: white;
+    //     box-sizing: border-box;
+    //     padding: 8px 15px;
+    // }
+    // .NewEmailForm {
+    //     box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 4px 6px rgba(163, 132, 132, 0.2); 
+    //     /* border: 1px solid; */
+    //     box-sizing: border-box;
+    //     padding: 0px 15px 30px 15px;
+    // }
+
+
+
     // .FormLabel {
     //     display: initial;
     //     margin-top: 15px;

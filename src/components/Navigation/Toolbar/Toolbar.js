@@ -34,30 +34,32 @@ class Toolbar extends Component {
     render() {
         return (
             <div className="Toolbar">
-                <nav className="LeftCont"> 
+                <nav className="LeftCont">  
                     <DrawerToggle clicked={this.toggleDrawerVisibility}/>
                     <Link to="/" exact style={{ textDecoration: 'none' }}> 
                         <FontAwesomeIcon icon={faEnvelope} className="Logo"/>
-                        <span className="AppName">Rmail</span>
+                    </Link>
+                    <Link to="/" exact style={{ textDecoration: 'none' }}> 
+                        <span className="AppName">POST</span>
                     </Link>
                     <div className="SearchCont">
                         <FontAwesomeIcon icon={faSearch}/>
-                        <input className="SearchBar" type="text" placeholder="Search email"
+                        <input className="SearchBar" type="text" placeholder="Search your mail"
                             onKeyDown={this.onSearchClick}/>
                     </div>
-                    <Link to="/new" style={{ textDecoration: 'none' }}>
-                        <span className="Actions ComposeCTA">Compose</span>
-                    </Link>
-                </nav>           
-                <div className="RightCont">
-                    {/* Sign Out / In / Up */}
-                    <Link to="/" style={{ textDecoration: 'none' }}>
-                        <span className="Actions SignOutCTA">Sign out</span>
-                    </Link>
-                    <FontAwesomeIcon icon={faUser} className="UserMenu fa-lg" title="user@rmail.com"/>
                     <Link to="/new">
                         <img src={composeImage} className="ComposeImage" alt="Compose Message"/>
                     </Link>  
+                    {/* <Link to="/new" style={{ textDecoration: 'none' }}>
+                        <span className="Actions ComposeCTA">Compose</span>
+                    </Link> */}
+                </nav>           
+                <div className="RightCont">
+                    {/* Sign Out / In / Up */}
+                    {/* <Link to="/" style={{ textDecoration: 'none' }}>
+                        <span className="Actions SignOutCTA">Sign out</span>
+                    </Link> */}
+                    <FontAwesomeIcon icon={faUser} className="UserMenu fa-lg" title="user@rmail.com"/>
                 </div>
             </div>
         )

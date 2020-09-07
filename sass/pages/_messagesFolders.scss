@@ -8,7 +8,7 @@
     .MessagesFolders {
         display: block;
         width: 200px;
-        min-height: 91vh;
+        min-height: $body-height;
         min-width: 200px;
         padding: $sm-pad $md-pad 0 0;
         box-sizing: border-box;

@@ -27,7 +27,7 @@ class NewMessage extends Component {
                 .create( document.querySelector( '#editor' ), {
                     // configuration documentation: https://ckeditor.com/docs/ckeditor5/latest/api/module_core_editor_editorconfig-EditorConfig.html
                     fontFamily: {
-                        options: [
+                        options: [ 
                             // ...
                         ],
                         supportAllValues: true

@@ -1,21 +1,19 @@
 // colors
-$react-color:#61dafb;
-$background-black-color: #20232a;
-// $react-color: white; // #61dafb;
-// $background-black-color: #363636; // #0073B2; // #283E4A; // #465280; // #20232a;
-
+$app-main-color: #BD3D3C; // #7693C1; // #C1A476; // #4e5f6e; //  #283E4A; // #AC9072; // #283E4A;
+$letter-paper-color: #C1A476; // #D6BF95
 
 $background-gray-color: #F8F8F8;
 $background-darker-gray-color: #E8EAED;
 $text-black-color: #202124;
 $text-gray-color: #808080;
 $text-light-gray-color: #C2C4C4;
-$star-icon-color: #FFC300;
+$star-icon-color: #FFC300; 
 
 // fonts
 $font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 sans-serif; // Arial, Helvetica, sans-serif;
+$font-letter: "Times New Roman", Times, serif;
 
 // font-sizes for ***paragraphs & spans only***
 $def-font-size: 0.875em;
