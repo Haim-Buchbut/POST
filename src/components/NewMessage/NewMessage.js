@@ -8,7 +8,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 // import './NewMessage.css';
 // import '../../App.css';
-import '../../main.css';
+import '../../main.css'; 
 import { addMessgaeToDB } from '../../store/actions/MessagesActions';
 
 class NewMessage extends Component {
@@ -74,27 +74,27 @@ class NewMessage extends Component {
                             if(!values.subject)
                                 errors.subject = 'Required';
                             return errors;
-                        }}
+                        }} 
 
                         onSubmit={ (values) => {
                             this.props.onAddMessage(this.props.mailSlurp, values.to, values.subject, values.message);
                             this.props.history.push("/");
                         }}
                     >
-                        <Form className="NewEmailForm">
-                            {/* <label htmlFor="toElm" className="FormLabel">To</label> */}
+                        <Form className="InputForm">
+                            {/* <label htmlFor="toElm" className="InputFormLabel">To</label> */}
                             <div className="ToContainer">
                                 <div className="ToPlaceholder">To</div>
-                                <Field type="text" name="to" id="toElm" className="InputText"></Field>
+                                <Field type="text" name="to" id="toElm" className="InputTextNoBorder"></Field>
                             </div>
-                            <ErrorMessage name="to" component="div" className="FormErrorMessage"></ErrorMessage>
-                            {/* <label htmlFor="subjectElm" className="FormLabel">Subject</label> */}
-                            <Field type="text" name="subject" id="subjectElm" className="InputText" autocomplete="off" placeholder="Subject"></Field>
-                            <ErrorMessage name="subject" component="div" className="FormErrorMessage"></ErrorMessage>
+                            <ErrorMessage name="to" component="div" className="InputFormErrorMessage"></ErrorMessage>
+                            {/* <label htmlFor="subjectElm" className="InputFormLabel">Subject</label> */}
+                            <Field type="text" name="subject" id="subjectElm" className="InputTextNoBorder" autocomplete="off" placeholder="Subject"></Field>
+                            <ErrorMessage name="subject" component="div" className="InputFormErrorMessage"></ErrorMessage>
                             <span id="seperator"> </span>
-                            <Field id="editor" 
+                            <Field id="editor"  
                                     component="textarea" name="message" className="TextArea" placeholder="Write your message here"></Field>
-                            <ErrorMessage name="message" component="div" className="FormErrorMessage"></ErrorMessage>
+                            <ErrorMessage name="message" component="div" className="InputFormErrorMessage"></ErrorMessage>
                             <div className="ActionsBar">
                                 <button type="submit" className="MainCTAButton" style={{marginRight: "10px"}}>Send</button>
                                 <Link to="/">

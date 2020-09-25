@@ -23,8 +23,9 @@
     "react-redux": "^7.2.0",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "serve": "^11.3.2",
     "uuid": "^8.3.0"
@@ -53,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-alignment": "^20.0.0"
+    "@ckeditor/ckeditor5-alignment": "^20.0.0",
+    "typescript": "^4.0.2"
   }
 }

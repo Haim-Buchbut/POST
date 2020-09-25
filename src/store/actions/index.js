@@ -13,4 +13,8 @@ export {
     addTodo,
     getTodos,
     deleteTodo
-} from './TodosActions'
+} from './TodosActions';
+export {
+    authUser,
+    signOut
+} from './AuthActions';

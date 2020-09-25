@@ -28,9 +28,6 @@ const actionTypes = {
     FILL_MY_INBOX_SUCCESS : 'FILL_MY_INBOX_SUCCESS',
 
 
-
-
-
     // Actions related to Todos
     ADD_TODO_SUCCESS : 'ADD_TODO_SUCCESS',
     ADD_TODO_FAILURE : 'ADD_TODO_FAILURE',
@@ -53,7 +50,11 @@ const actionTypes = {
 
 
     // Other actions
-    TOGGLE_SIDE_DRAWER : 'TOGGLE_SIDE_DRAWER'
+    TOGGLE_SIDE_DRAWER : 'TOGGLE_SIDE_DRAWER',
+    AUTH_BEGIN : 'AUTH_BEGIN',
+    AUTH_SUCCESS : 'AUTH_SUCCESS',
+    AUTH_FAILURE : 'AUTH_FAILURE',
+    AUTH_SIGNOUT : 'AUTH_SIGNOUT'
 }
 
 export default actionTypes;

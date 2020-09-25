@@ -2,6 +2,13 @@
 
 .MyLink {
     text-decoration: none;
+    cursor: context-menu;
     color: #222222;
+  }
+
+  .EmphasizedLink {
+    font-weight: 500;
+    cursor: context-menu;
+    color: #1A73E8;
   }
   

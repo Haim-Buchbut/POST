@@ -23,15 +23,16 @@
 .Button {
   border-width: 1px;
   border-color: #202124;
+  font-size: 1em;
   color: #202124;
 }
 
-/* line 17, ../../Users/User/Documents/Web Dev/rmail/sass/components/_buttons.scss */
+/* line 18, ../../Users/User/Documents/Web Dev/rmail/sass/components/_buttons.scss */
 .MainCTAButton {
   border-width: 2px;
   border-color: #BD3D3C;
+  font-size: 1em;
   color: #BD3D3C;
-  font-weight: bold;
 }
 
 /* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/components/_icons.scss */
@@ -42,7 +43,15 @@
 /* line 3, ../../Users/User/Documents/Web Dev/rmail/sass/components/_links.scss */
 .MyLink {
   text-decoration: none;
+  cursor: context-menu;
   color: #222222;
+}
+
+/* line 9, ../../Users/User/Documents/Web Dev/rmail/sass/components/_links.scss */
+.EmphasizedLink {
+  font-weight: 500;
+  cursor: context-menu;
+  color: #1A73E8;
 }
 
 /* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/components/_spinner.scss */
@@ -200,6 +209,79 @@
   padding: 15px;
 }
 
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputText {
+  border-width: 1px;
+  height: 40px;
+  margin-top: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* line 11, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputTextNoBorder {
+  border-width: 0 0 1px 0;
+  box-sizing: border-box;
+  padding: 15px 2px 2px 0;
+  margin-top: 15px;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* line 20, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  /* -webkit-text-fill-color: #fff !important; */
+}
+
+/* line 27, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputText:focus {
+  outline: none;
+}
+
+/* line 30, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputTextNoBorder:focus {
+  outline: none;
+}
+
+/* line 36, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputForm, .InputFormStretched {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* line 43, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputFormStretched {
+  align-items: stretch;
+}
+
+/* line 47, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputFormLabel {
+  display: none;
+}
+
+/* line 50, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.InputFormErrorMessage {
+  font-size: 0.75em;
+  color: #d11124;
+  margin-top: 4px;
+}
+
+/* line 55, ../../Users/User/Documents/Web Dev/rmail/sass/components/_inputs.scss */
+.FormGeneralErrorMessage {
+  font-size: 1em;
+  color: #d11124;
+  margin-top: 15px;
+}
+
 /* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_appLayout.scss */
 html {
   height: 100%;
@@ -290,47 +372,48 @@ body {
 }
 
 /* line 58, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
-.SignOutCTA {
-  display: none;
-}
-
-/* line 61, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
 .UserMenu {
   display: none;
 }
 
+/* line 61, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+.SignOut {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
-  /* line 66, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  /* line 67, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
   .RightCont {
     display: initial;
   }
-  /* line 69, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  /* line 70, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
   .Logo {
     display: initial;
     color: white;
     font-size: 2em;
   }
-  /* line 75, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  /* line 76, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
   .AppName {
     font-size: 1.4em;
   }
-  /* line 78, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  /* line 79, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
   .SearchCont {
     max-width: 300px;
     padding: 0 10px;
     margin-left: 30px;
   }
-  /* line 90, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  /* line 88, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
+  .SignOut {
+    display: initial;
+    cursor: pointer;
+    font-weight: 600rem;
+    color: white;
+  }
+  /* line 95, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
   .UserMenu {
     display: initial;
     color: white;
   }
-}
-
-/* line 96, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_toolbar.scss */
-.Actions {
-  font-weight: 600rem;
-  color: white;
 }
 
 /* line 1, ../../Users/User/Documents/Web Dev/rmail/sass/layout/_sideDrawer.scss */
@@ -827,57 +910,14 @@ body {
   font-weight: 500;
 }
 
-/* line 20, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
-.NewEmailForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 100%;
-}
-
-/* line 27, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
-.FormLabel {
-  display: none;
-}
-
-/* line 30, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
-.FormErrorMessage {
-  font-size: 0.75em;
-  color: red;
-  margin-top: 5px;
-}
-
-/* line 35, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  /* -webkit-text-fill-color: #fff !important; */
-}
-
-/* line 42, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
-.InputText {
-  border-width: 0 0 1px 0;
-  height: 20px;
-  margin-top: 15px;
-  font-size: 1em;
-  width: 100%;
-}
-
-/* line 49, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
-.InputText:focus {
-  outline: none;
-}
-
-/* line 52, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 54, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 .ToContainer {
   display: flex;
   align-items: flex-end;
+  width: 100%;
 }
 
-/* line 56, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 59, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 .ToPlaceholder {
   width: 25px;
   border-width: 0 0 1px 0;
@@ -888,7 +928,7 @@ input:-webkit-autofill:active {
   color: #757575;
 }
 
-/* line 65, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 68, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 #editor {
   border: none;
   font: 400 13.33px Arial;
@@ -897,14 +937,14 @@ input:-webkit-autofill:active {
   resize: none;
 }
 
-/* line 72, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 75, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 #editor:focus {
   border: none;
   outline: none;
   overflow: hidden;
 }
 
-/* line 104, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 107, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 #seperator {
   width: 100%;
   height: 20px;
@@ -913,12 +953,12 @@ input:-webkit-autofill:active {
 /* .ck.ck-editor {
     margin-top: 20px;  
 } */
-/* line 112, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 115, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 .ck-editor__editable {
   height: 250px;
 }
 
-/* line 116, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
+/* line 119, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_newMessage.scss */
 .ActionsBar {
   margin-top: 20px;
 }
@@ -1015,6 +1055,39 @@ input:-webkit-autofill:active {
 .TodosModule {
   width: 100%;
   max-width: 500px;
+}
+
+/* line 2, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_auth.scss */
+.AuthContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px 15px;
+}
+
+/* line 11, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_auth.scss */
+.AuthForm {
+  max-width: 400px;
+}
+
+/* line 14, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_auth.scss */
+.AuthAppLogo {
+  color: #BD3D3C;
+  font-size: 3em;
+}
+
+/* line 18, ../../Users/User/Documents/Web Dev/rmail/sass/pages/_auth.scss */
+.AuthPageTitle {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* line 3, ../../Users/User/Documents/Web Dev/rmail/sass/abstracts/_index.scss */
+.Hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

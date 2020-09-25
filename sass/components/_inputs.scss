@@ -1,0 +1,59 @@
+// Inputs
+.InputText {
+    border-width: 1px;
+    height: 40px;
+    margin-top: $md-mrg;
+    padding-left: $md-pad;
+    box-sizing: border-box;
+    font-size: $md-font-size;
+    width: 100%;
+}
+.InputTextNoBorder {
+    border-width: 0 0 1px 0;
+    // Height: padding + font size = input height = 15px (top) + 16px (font size) + 2px (bottom) = 33px
+    box-sizing: border-box;
+    padding: $md-pad $xs-pad $xs-pad 0;
+    margin-top: $md-mrg;
+    font-size: $md-font-size;
+    width: 100%;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    /* -webkit-text-fill-color: #fff !important; */
+}
+.InputText:focus {
+    outline: none;
+}
+.InputTextNoBorder:focus {
+    outline: none;
+}
+
+
+// Forms
+.InputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.InputFormStretched {
+    @extend .InputForm;
+    align-items: stretch;
+}
+.InputFormLabel {
+    display: none;
+}
+.InputFormErrorMessage {
+    font-size: $sm-font-size;
+    color: $text-error-color; 
+    margin-top: 4px;
+}
+.FormGeneralErrorMessage {
+    font-size: $md-font-size;
+    color: $text-error-color; 
+    margin-top: $md-mrg;
+}

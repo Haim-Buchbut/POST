@@ -8,6 +8,7 @@ $text-black-color: #202124;
 $text-gray-color: #808080;
 $text-light-gray-color: #C2C4C4;
 $star-icon-color: #FFC300; 
+$text-error-color: #d11124;
 
 // fonts
 $font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,9 +24,11 @@ $lg-font-size: 1.125em;
 $xl-font-size: 1.4em;
 
 // paddings & margins
+$xs-pad: 2px;
 $sm-pad: 8px;
 $md-pad: 15px;
 $lg-pad: 30px; 
+$xs-mrg: 2px;
 $sm-mrg: 8px;
 $md-mrg: 15px;
 $lg-mrg: 30px;

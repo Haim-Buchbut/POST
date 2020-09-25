@@ -7,6 +7,7 @@ import { faInbox, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faPaperPlane, faCheckSquare } from '@fortawesome/free-regular-svg-icons';
 
 // import './SideDrawer.css'; 
+import '../../../main.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import actionTypes from '../../../store/actions/actionTypes';
 

@@ -5,7 +5,6 @@ import MessagesList from '../MessagesList/MessagesList';
 
 
 class MessagesCont extends Component {
-
     render() {
         return (
             <div className="MessagesCont">
@@ -17,4 +16,4 @@ class MessagesCont extends Component {
 }
 
 
-export default MessagesCont;
+export default MessagesCont; 
