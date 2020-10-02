@@ -24,19 +24,19 @@ const initialState = {
 
 
 const MessagesReducer = (state = initialState, action) => {
-    console.log("MessagesReducer: action is " + action.type);
+    // console.log("MessagesReducer: action is " + action.type);
     // console.log(action);
     // console.log(state);
     switch (action.type) {
 
         case actionTypes.ADD_MESSAGE_BEGIN:
-            console.log("Reducer: ADD_MESSAGE_BEGIN handler");
+            console.log("Message Reducer: ADD_MESSAGE_BEGIN handler");
             return {
                 ...state,
                 addInProgress : true
             }
         case actionTypes.ADD_MESSAGE_SUCCESS:
-            console.log("Reducer: ADD_MESSAGE_SUCCESS handler");
+            console.log("Message Reducer: ADD_MESSAGE_SUCCESS handler");
             return {
                 ...state,
                 messages : [...state.messages, {                    
@@ -50,7 +50,7 @@ const MessagesReducer = (state = initialState, action) => {
                 errorMsg: null
             };
         case actionTypes.ADD_MESSAGE_FAILURE:
-            console.log("Reducer: ADD_MESSAGE_FAILURE");
+            console.log("Message Reducer: ADD_MESSAGE_FAILURE");
             return {
                 ...state,
                 errorMsg : action.errorMsg,
@@ -59,14 +59,14 @@ const MessagesReducer = (state = initialState, action) => {
 
  
         case actionTypes.DELETE_MESSAGE_BEGIN:
-            console.log("Reducer: DELETE_MESSAGE_BEGIN handler");
+            console.log("Message Reducer: DELETE_MESSAGE_BEGIN handler");
             return {
                 ...state,
                 deleteInProgress : true
             }
         case actionTypes.DELETE_MESSAGE_SUCCESS:
-            console.log("Reducer: DELETE_MESSAGE_SUCCESS handler");
-            console.log("Number of Messages Before Deletion: " + state.messages.length);
+            console.log("Message Reducer: DELETE_MESSAGE_SUCCESS handler");
+            // console.log("Number of Messages Before Deletion: " + state.messages.length);
             var itemIdx = null;
             for(var i=0; i < state.messages.length; i++)
             {
@@ -90,7 +90,7 @@ const MessagesReducer = (state = initialState, action) => {
                 deleteInProgress : false
             }
         case actionTypes.DELETE_MESSAGE_FAILURE:
-            console.log("Reducer: DELETE_MESSAGE_FAILURE handler");  
+            console.log("Message Reducer: DELETE_MESSAGE_FAILURE handler");  
             return {
                 ...state,
                 errorMsg : action.errorMsg,
@@ -99,13 +99,13 @@ const MessagesReducer = (state = initialState, action) => {
 
 
         case actionTypes.GET_MESSAGE_BEGIN:
-                console.log("Reducer: GET_MESSAGE_BEGIN handler");
-                return {
-                    ...state,
-                    getMessageInProgress : true
-                }    
+            console.log("Message Reducer: GET_MESSAGE_BEGIN handler");
+            return {
+                ...state,
+                getMessageInProgress : true
+            }    
         case actionTypes.GET_MESSAGE_SUCCESS:
-            console.log("Reducer | GET_MESSAGE_SUCCESS handler");
+            console.log("Message Reducer: GET_MESSAGE_SUCCESS handler");
             // console.log(state);
             // console.log(action);
             return {
@@ -123,9 +123,9 @@ const MessagesReducer = (state = initialState, action) => {
                 errorMsg : null         
             }    
         case actionTypes.GET_MESSAGE_FAILURE:
-            console.log("Reducer | GET_MESSAGE_FAILURE handler");
-            console.log(state);
-            console.log(action);
+            console.log("Message Reducer: GET_MESSAGE_FAILURE handler");
+            // console.log(state);
+            console.log(action.error);
             return {
                 ...state,
                 errorMsg: action.errorMsg,
@@ -134,13 +134,13 @@ const MessagesReducer = (state = initialState, action) => {
         
 
         case actionTypes.GET_MESSAGES_BEGIN:
-            console.log("Reducer: GET_MESSAGES_BEGIN handler");
+            console.log("Message Reducer: GET_MESSAGES_BEGIN handler");
             return {
                 ...state,
                 getMessagesInProgress : true
             }
         case actionTypes.GET_MESSAGES_SUCCESS:
-            console.log("Reducer | GET_MESSAGES_SUCCESS handler");
+            console.log("Message Reducer: GET_MESSAGES_SUCCESS handler");
             return {
                 ...state,
                 messages : [...action.messages],
@@ -151,7 +151,7 @@ const MessagesReducer = (state = initialState, action) => {
                 errorMsg : null
             }
         case actionTypes.GET_MESSAGES_FAILURE:
-            console.log("Reducer | GET_MESSAGES_FAILURE handler");
+            console.log("Message Reducer: GET_MESSAGES_FAILURE handler");
             return {
                 ...state,
                 messages : [],
@@ -160,7 +160,7 @@ const MessagesReducer = (state = initialState, action) => {
                 errorMsg : action.errorMsg 
             }
         case actionTypes.REFRESH_MESSAGES:
-            console.log("Reducer | REFRESH_MESSAGES handler");
+            console.log("Message Reducer: REFRESH_MESSAGES handler");
             return {
                 ...state,
                 // selectedFolder : action.selectedFolder,
@@ -169,7 +169,7 @@ const MessagesReducer = (state = initialState, action) => {
     
 
         case actionTypes.TOGGLE_STAR_SUCCESS:
-            console.log("Reducer | TOGGLE_STAR_SUCCESS handler");
+            console.log("Message Reducer: TOGGLE_STAR_SUCCESS handler");
             let messages = state.messages.slice();
             let messageIdx = messages.findIndex(e => e.id === action.messageId);
             if( messageIdx !== undefined ) 
@@ -197,8 +197,8 @@ const MessagesReducer = (state = initialState, action) => {
                         messagesUptodate: state.selectedFolder === FOLDER_NAME_STARRED? false : true,
                         error: '' } 
             }
-            case actionTypes.TOGGLE_STAR_FAILURE:
-            console.log("Reducer | TOGGLE_STAR_FAILURE handler");
+        case actionTypes.TOGGLE_STAR_FAILURE:
+            console.log("Message Reducer: TOGGLE_STAR_FAILURE handler");
             console.log(action.error);
             return {
                 ...state,
@@ -207,8 +207,8 @@ const MessagesReducer = (state = initialState, action) => {
 
 
         case actionTypes.FILL_MY_INBOX_SUCCESS:
-            console.log("Reducer: FILL_MY_INBOX_SUCCESS handler");
-            console.log(action.messagesAdded);
+            console.log("Message Reducer: FILL_MY_INBOX_SUCCESS handler");
+            // console.log(action.messagesAdded);
             return {
                 ...state,
                 messages : [...state.messages, action.messagesAdded],
@@ -219,17 +219,17 @@ const MessagesReducer = (state = initialState, action) => {
 
 
         case actionTypes.TOGGLE_SIDE_DRAWER:
-            console.log("Reducer | TOGGLE_SIDE_DRAWER handler");
-            console.log(state);
-            console.log(action);
+            console.log("Message Reducer: TOGGLE_SIDE_DRAWER handler");
+            // console.log(state);
+            // console.log(action);
             return {
                 ...state,
-                showSideDrawer : !state.showSideDrawer 
+                showSideDrawer : state.showSideDrawer? false : true 
             }
     
 
         default:
-            console.log("Reducer: Default handler");
+            // console.log("Reducer: Default handler");
             return state;
             // if( state != null ) {
             //     console.log("state has values");

@@ -14,11 +14,10 @@ import actionTypes from '../../../store/actions/actionTypes';
 class SideDrawer extends Component {
 
     render() {
-        console.log("sideDrawer component");
+        console.log("SideDrawer component");
         var drawerClasses = "DrawerCont";
         if(!this.props.showSideDrawer)
             drawerClasses = drawerClasses.concat(" HideSideDrawer");
-        console.log(drawerClasses);
 
         return (
             <div>
@@ -27,7 +26,8 @@ class SideDrawer extends Component {
                 <div className={drawerClasses}>
                     <div className="DrawerHeader">
                         <span className="SDAppName">Rmail</span>
-                        <FontAwesomeIcon icon={faTimes} className="CloseDrawer fa-lg"
+                        {/* CloseDrawer */}
+                        <FontAwesomeIcon icon={faTimes} className="fa-lg"
                             onClick={this.props.toggleSideDrawer}/>
                     </div>
 

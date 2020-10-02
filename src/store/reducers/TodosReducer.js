@@ -9,7 +9,7 @@ const initialState = {
 
 
 const TodosReducer = (state = initialState, action) => {
-    console.log("TodosReducer: action is " + action.type);
+    // console.log("Todos Reducer: action is " + action.type);
 
     switch (action.type) {
         case actionTypes.ADD_TODO_SUCCESS:
@@ -30,13 +30,13 @@ const TodosReducer = (state = initialState, action) => {
 
 
         case actionTypes.GET_TODOS_BEGIN:
-            console.log("Reducer: GET_TODOS_BEGIN handler");
+            console.log("Todos Reducer: GET_TODOS_BEGIN handler");
             return {
                 ...state,
                 getTodosInProgress : true
             }
         case actionTypes.GET_TODOS_SUCCESS:
-            console.log("GET_TODOS_SUCCESS handler");
+            console.log("Todos Reducer: GET_TODOS_SUCCESS handler");
             return {
                 ...state,
                 todos: [...action.todos],
@@ -44,7 +44,7 @@ const TodosReducer = (state = initialState, action) => {
                 getTodosInProgress : false
             }
         case actionTypes.GET_TODOS_FAILURE:
-            console.log("GET_TODOS_FAILURE handler");
+            console.log("Todos Reducer: GET_TODOS_FAILURE handler");
             return {
                 ...state,
                 error: action.error,
@@ -52,6 +52,7 @@ const TodosReducer = (state = initialState, action) => {
             }
 
         case actionTypes.DELETE_TODO_SUCCESS:
+            console.log("Todos Reducer: DELETE_TODO_SUCCESS handler");
             const updatedTodosList = [...state.todos].filter(curr => curr.id !== action.todoId)
             return {
                 ...state,
@@ -59,12 +60,14 @@ const TodosReducer = (state = initialState, action) => {
                 error: ''
             }
         case actionTypes.DELETE_TODO_FAILURE:
+            console.log("Todos Reducer: GET_TODOS_FAILURE handler");
             return {
                 ...state,
                 error: action.error
             }
 
         case actionTypes.UPDATE_TODO_SUCCESS:
+            console.log("Todos Reducer: UPDATE_TODO_SUCCESS handler");
             let todos = state.todos.slice();
             let todoIdx = todos.findIndex(e => e.id === action.todoId);
             if( todoIdx !== undefined ) 
@@ -75,12 +78,14 @@ const TodosReducer = (state = initialState, action) => {
                 error: ''
             }
         case actionTypes.UPDATE_TODO_FAILURE:
+            console.log("Todos Reducer: GET_TODOS_FAILURE handler");
             return {
                 ...state,
                 error: action.error
             }
 
         case actionTypes.TOGGLE_TODO_STATUS_SUCCESS:
+            console.log("Todos Reducer: TOGGLE_TODO_STATUS_SUCCESS handler");
             let todos2 = state.todos.slice();
             let todo2Idx = todos2.findIndex(e => e.id === action.todoId);
             if( todo2Idx !== undefined ) 
@@ -91,6 +96,7 @@ const TodosReducer = (state = initialState, action) => {
                 error: ''
             }
         case actionTypes.TOGGLE_TODO_STATUS_FAILURE:
+            console.log("Todos Reducer: TOGGLE_TODO_STATUS_FAILURE handler");
             return {
                 ...state,
                 error: action.error
@@ -98,7 +104,7 @@ const TodosReducer = (state = initialState, action) => {
 
 
         default:
-            console.log("Default handler");
+            // console.log("Default handler");
             return state;
     }
 }

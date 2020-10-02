@@ -16,8 +16,7 @@ class MessagesFolders extends Component {
 
     onSelectFolder = (folderName) => {
         console.log("onSelectFolder(): " + folderName);
-        // this.props.getMessages(this.props.selectedFolder);
-        this.props.refreshMessages();
+        // this.props.refreshMessages();
 
         switch(folderName) {
             case FOLDER_NAME_SENT: 
