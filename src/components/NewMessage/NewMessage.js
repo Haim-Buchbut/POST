@@ -73,11 +73,12 @@ class NewMessage extends Component {
                             }
                             if(!values.subject)
                                 errors.subject = 'Required';
+
                             return errors;
                         }} 
 
                         onSubmit={ (values) => {
-                            this.props.onAddMessage(this.props.mailSlurp, values.to, values.subject, values.message);
+                            this.props.onAddMessage(this.props.mailSlurp, values.to, values.subject, this.state.messageEditor.getData());
                             this.props.history.push("/");
                         }}
                     >
