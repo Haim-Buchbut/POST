@@ -20,7 +20,7 @@ class MessageDetails extends Component {
         console.log(params.messageId);
         
         this.props.getMessage(params.messageId);
-        markMessageAsViewed(params.messageId);
+        // markMessageAsViewed(params.messageId);
     }
     onDeleteItem = () => {
         console.log("onDeleteItem - key=" + this.props.currentMessage.id);

@@ -10,10 +10,14 @@ import { FOLDER_NAME_INBOX, FOLDER_NAME_SENT, FOLDER_NAME_STARRED, FOLDER_NAME_T
 
 class MessagesFolders extends Component {
 
+
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+
     componentDidUpdate() {
         console.log("MessagesFolders - componentDidUpdate");
     }
-
     onSelectFolder = (folderName) => {
         console.log("onSelectFolder(): " + folderName);
         // this.props.refreshMessages();
@@ -38,11 +42,10 @@ class MessagesFolders extends Component {
         this.props.fillMyInbox();
     }
 
-
     render() {
         return (
             <div className="MessagesFolders">
-                <MessagesSingleFolder   name="Inbox" 
+                <MessagesSingleFolder   name={"Inbox (" + this.props.newMessagesCount + ")"} 
                                         type={FOLDER_NAME_INBOX}
                                         selected={this.props.selectedFolder === FOLDER_NAME_INBOX? true : false} 
                                         clicked={this.onSelectFolder}
@@ -70,14 +73,15 @@ class MessagesFolders extends Component {
 
 const mapStateToProps = state => {
     return {
-        selectedFolder: state.messagesReducer.selectedFolder
+        selectedFolder: state.messagesReducer.selectedFolder,
+        newMessagesCount : state.messagesReducer.newMessagesCount
     }
 }
 const mapDispatchToProps = dispatch => {
     return {
         getMessages: (folderName) => dispatch(getMessagesFromDB(folderName)),
         refreshMessages: () => dispatch(refreshMessages()),
-        fillMyInbox : () => dispatch(fillMyInbox())
+        fillMyInbox : () => dispatch(fillMyInbox()),
     };
 };
 export default connect(mapStateToProps,mapDispatchToProps) (withRouter(MessagesFolders));

@@ -1,9 +1,10 @@
 
 import actionTypes from '../actions/actionTypes';
-import { FOLDER_NAME_STARRED } from '../../constants';
+import { FOLDER_NAME_INBOX, FOLDER_NAME_STARRED } from '../../constants';
 
 const initialState = {
     messages : [],
+    newMessagesCount : 0,
     nextMessageId : 1,
     messagesUptodate : false,
 
@@ -48,7 +49,7 @@ const MessagesReducer = (state = initialState, action) => {
                 messagesUptodate : false,
                 addInProgress : false,
                 errorMsg: null
-            };
+            }
         case actionTypes.ADD_MESSAGE_FAILURE:
             console.log("Message Reducer: ADD_MESSAGE_FAILURE");
             return {
@@ -81,6 +82,7 @@ const MessagesReducer = (state = initialState, action) => {
                     messages : [...state.messages.slice(0, itemIdx), 
                                 ...state.messages.slice(itemIdx + 1) ],
                     deleteInProgress : false,
+                    newMessagesCount : (action.newMessgae == true)? state.newMessagesCount - 1 : state.newMessagesCount,
                     errorMsg : null 
                 }
             // Otherwise - 
@@ -108,6 +110,9 @@ const MessagesReducer = (state = initialState, action) => {
             console.log("Message Reducer: GET_MESSAGE_SUCCESS handler");
             // console.log(state);
             // console.log(action);
+            let newCount = state.newMessagesCount;
+            if(!action.viewed && (newCount > 0))
+                newCount = newCount - 1;
             return {
                 ...state,
                 currentMessage : {
@@ -120,6 +125,7 @@ const MessagesReducer = (state = initialState, action) => {
                     starred : action.starred
                 },
                 getMessageInProgress : false,
+                newMessagesCount : newCount,
                 errorMsg : null         
             }    
         case actionTypes.GET_MESSAGE_FAILURE:
@@ -146,6 +152,7 @@ const MessagesReducer = (state = initialState, action) => {
                 messages : [...action.messages],
                 selectedFolder : action.selectedFolder,
                 nextMessageId : action.messages.length + 1,
+                newMessagesCount : (action.selectedFolder == FOLDER_NAME_INBOX)? action.newMessagesCount : state.newMessagesCount,
                 messagesUptodate : true,
                 getMessagesInProgress : false,
                 errorMsg : null
@@ -167,6 +174,30 @@ const MessagesReducer = (state = initialState, action) => {
                 messagesUptodate : false
             }
     
+        case actionTypes.GET_MESSAGES_COUNT_SUCCESS:
+            console.log("Message Reducer: GET_MESSAGES_COUNT_SUCCESS handler");
+            return {
+                ...state,
+                newMessagesCount : action.newMessagesCount,
+                errorMsg : null
+            }
+        case actionTypes.GET_MESSAGES_COUNT_FAILURE:
+            console.log("Message Reducer: GET_MESSAGES_COUNT_FAILURE handler");
+            return {
+                ...state,
+                errorMsg : action.errorMsg 
+            }
+        // case actionTypes.MARK_MESSAGES_COUNT_SUCCESS: 
+        //     console.log("Message Reducer: MARK_MESSAGES_COUNT_SUCCESS handler");
+        //     let newCount = state.newMessagesCount;
+        //     if(newCount > 0)
+        //         newCount = newCount - 1;
+        //     return {
+        //         ...state,
+        //         newMessagesCount : newCount,
+        //         errorMsg : null
+        //     }
+
 
         case actionTypes.TOGGLE_STAR_SUCCESS:
             console.log("Message Reducer: TOGGLE_STAR_SUCCESS handler");

@@ -27,10 +27,24 @@ class NewMessage extends Component {
                 .create( document.querySelector( '#editor' ), {
                     // configuration documentation: https://ckeditor.com/docs/ckeditor5/latest/api/module_core_editor_editorconfig-EditorConfig.html
                     fontFamily: {
-                        options: [ 
-                            // ...
-                        ],
-                        supportAllValues: true
+                        options: [
+                            'default',
+                            'Ubuntu, Arial, sans-serif',
+                            'Ubuntu Mono, Courier New, Courier, monospace'
+                        ]
+                    },
+                    fontSize: {
+                        options: [
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            14,
+                            18,
+                            24,
+                            30
+                        ]
                     },
                     language: {
                         content: ['he','us']
@@ -38,9 +52,11 @@ class NewMessage extends Component {
                     alignment: {
                         options: [ 'left', 'right' ]
                     },
-                    toolbar: [
+                    toolbar: 
+                        // To add more options like fontFamily & fontSize we need to re-build CKEditor5 with additional plugins: https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installing-plugins.html
+                        // [ 'fontFamily', 'heading', 'bulletedList', 'numberedList', 'fontFamily', 'undo', 'redo']
                         // complete list: https://ckeditor.com/old/forums/CKEditor/Complete-list-of-toolbar-items
-                        'heading', '|', 'bold', 'italic', 'underline', 'link', '|', 'bulletedList', 'numberedList', 'outdent', 'indent', '|',  'undo', 'redo']
+                        ['heading', '|', 'bold', 'italic', 'underline', 'link', '|', 'bulletedList', 'numberedList', 'outdent', 'indent', '|',  'undo', 'redo']
                 }) 
                 .then( editor => {
                     this.setState( {messageEditor : editor });

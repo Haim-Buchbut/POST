@@ -18,7 +18,7 @@ class MessagesListItem extends Component
         shouldDisplayDelete : false
     }
     onDeleteItem = () => {
-        this.props.removeMessage(this.props.id);
+        this.props.removeMessage(this.props.id, this.props.viewed == false);
     }
     onViewItem = () => {
         this.props.history.push("/message/" + this.props.id)
@@ -86,7 +86,7 @@ const mapDispatchToProps = dispatch => {
         //                                     type: actionTypes.REMOVE_MESSAGE,
         //                                     messageId : messageId })
         // With create action
-        removeMessage: (messageId) => dispatch(deleteMessageFromDB(messageId)),
+        removeMessage: (messageId, newMessage) => dispatch(deleteMessageFromDB(messageId, newMessage)),
         getMessage: (messageId) => dispatch(getMessageFromDB(messageId)),
         toggleStar: (messageId, isStarred) => dispatch(toggleStar(messageId, isStarred))
     }

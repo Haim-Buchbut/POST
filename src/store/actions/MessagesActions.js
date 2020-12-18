@@ -5,14 +5,14 @@ import { FOLDER_NAME_STARRED, FOLDER_NAME_INBOX, MESSAGE_TYPE_INCOMING, MESSAGE_
 // import mailSlurp from "mailslurp-client";
 
 
-export const deleteMessageFromDB = (messageId) => {
+export const deleteMessageFromDB = (messageId, newMessgae) => {
     console.log("Action Creator - deleteMessageFromDB()");
     return dispatch => {
         dispatch(deleteMessageBegin());
         console.log("Path: " + 'messages/'.concat(messageId));
         axios.delete('messages/'.concat(messageId) + ".json")
             .then( response => {
-                dispatch(deleteMessageSuccess(messageId));
+                dispatch(deleteMessageSuccess(messageId, newMessgae));
             })
             .catch( response => {
                 dispatch(deleteMessageFailure(response.error));
@@ -24,10 +24,11 @@ export const deleteMessageBegin = () => {
         type : actionTypes.DELETE_MESSAGE_BEGIN
     }
 }
-export const deleteMessageSuccess = (messageId) => {
+export const deleteMessageSuccess = (messageId, newMessgae) => {
     return {
         type : actionTypes.DELETE_MESSAGE_SUCCESS,
-        messageId : messageId
+        messageId : messageId,
+        newMessgae : newMessgae
     }
 }
 export const deleteMessageFailure = (error) => {
@@ -137,7 +138,8 @@ export const getMessagesFromDB = (selectedFolder) => {
             console.log(response);
             // convert returned JSON object to array
             var fetchedMessages = [];
-            for(let key in response.data)
+            var newMessagesCount = 0;
+            for(let key in response.data) {
                 fetchedMessages.push({
                     id: key,
                     to: response.data[key].to,
@@ -146,10 +148,13 @@ export const getMessagesFromDB = (selectedFolder) => {
                     viewed: response.data[key].viewed,
                     starred: response.data[key].starred
                 });
+                if(!response.data[key].viewed)
+                    newMessagesCount++;
+            }
             // In order to sort by date on the SERVER SIDE, we could have additoinal field which conactenate message type & date, with endDate of today (e.g. "incoming20200814")
             var messagesSorted = fetchedMessages.sort((a, b) => a.sentTime < b.sentTime ? 1 : -1
             );
-            dispatch(getMessagesSuccess(messagesSorted,selectedFolder));
+            dispatch(getMessagesSuccess(messagesSorted, newMessagesCount, selectedFolder));
         })
         .catch(function (error) {
             console.log(error);
@@ -199,11 +204,12 @@ export const getMessagesBegin = () => {
         type : actionTypes.GET_MESSAGES_BEGIN
     }
 }
-export const getMessagesSuccess = (fetchedMessages,selectedFolder) => {
+export const getMessagesSuccess = (fetchedMessages, newMessagesCount, selectedFolder) => {
     return {
         type: actionTypes.GET_MESSAGES_SUCCESS,
         messages : fetchedMessages,
-        selectedFolder : selectedFolder
+        selectedFolder : selectedFolder,
+        newMessagesCount : newMessagesCount
     }
 }
 export const getMessagesFailure = (errorMsg) => {
@@ -237,7 +243,11 @@ export const getMessageFromDB = (messageId) => {
                 response.data.message,
                 response.data.sentTime,
                 response.data.messageType,
-                response.data.starred));
+                response.data.starred,
+                response.data.viewed));
+            
+            if(!response.data.viewed)
+                markMessageAsViewed(messageId);
         })
         .catch( function(error) {
             console.log(error);
@@ -250,7 +260,7 @@ export const getMessageBegin = () => {
         type : actionTypes.GET_MESSAGE_BEGIN
     }
 }
-export const getMessageSuccess = (id,to,subject,message,sentTime,messageType,starred) => {
+export const getMessageSuccess = (id,to,subject,message,sentTime,messageType,starred,viewed) => {
     return {
         type : actionTypes.GET_MESSAGE_SUCCESS,
         id :  id,
@@ -259,7 +269,8 @@ export const getMessageSuccess = (id,to,subject,message,sentTime,messageType,sta
         message : message,
         sentTime : sentTime,
         messageType : messageType,
-        starred : starred
+        starred : starred,
+        viewed : viewed
     }
 }
 export const getMessageFailed = (errorMsg) => {
